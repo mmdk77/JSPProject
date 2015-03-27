@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class HelloServlet
  */
-@WebServlet("/HelloServlet") //@이노테이션("/URL 맵핑")
+@WebServlet("/HelloServlet") //@이노테이션("/URLMapping")
 public class HelloServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -31,8 +31,8 @@ public class HelloServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		//한글처리
-		response.setContentType("text/html;charset=UTF-8");
-		request.setCharacterEncoding("UTF-8"); 
+		response.setContentType("text/html;charset=UTF-8"); //ContentType <-문서 종류
+		request.setCharacterEncoding("UTF-8");    		    //요청시 인코딩할때 UTF-8로 하겠다는 설정.
 		PrintWriter out = response.getWriter();
 		
 		String name = request.getParameter("name");// test2와 같아야함.
